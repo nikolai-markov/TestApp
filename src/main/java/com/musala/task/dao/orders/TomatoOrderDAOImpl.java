@@ -1,4 +1,4 @@
-package com.musala.task.dao;
+package com.musala.task.dao.orders;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Repository;
 
-import com.musala.task.domain.TomatoOrder;
+import com.musala.task.model.TomatoOrder;
 
 @Repository
 public class TomatoOrderDAOImpl implements TomatoOrderDAO {

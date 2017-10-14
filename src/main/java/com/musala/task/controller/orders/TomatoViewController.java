@@ -1,18 +1,17 @@
-package com.musala.task.controller;
+package com.musala.task.controller.orders;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
-import com.musala.task.domain.TomatoOrder;
-import com.musala.task.services.TomatoOrdersService;
+import com.musala.task.model.TomatoOrder;
+import com.musala.task.services.orders.TomatoOrdersService;
 
 @Controller
 @RequestMapping(path="/data")
@@ -20,17 +19,6 @@ public class TomatoViewController {
 	
 	@Autowired
     private TomatoOrdersService userService;
-
-	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
-	public ModelAndView hello(@PathVariable("name") String name) {
-
-		ModelAndView model = new ModelAndView();
-		MappingJackson2JsonView view = new MappingJackson2JsonView();
-		model.setView(view);
-		model.addObject("msg", name);
-
-		return model;
-	}
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.PUT})
 	public ModelAndView getOrdersData(@RequestParam(defaultValue="3", value="size", required=false) String size) {

@@ -1,12 +1,12 @@
-package com.musala.task.services;
+package com.musala.task.services.orders;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.musala.task.dao.TomatoOrderDAO;
-import com.musala.task.domain.TomatoOrder;
+import com.musala.task.dao.orders.TomatoOrderDAO;
+import com.musala.task.model.TomatoOrder;
 
 @Service
 public class TomatoOrdersServiceImpl implements TomatoOrdersService {

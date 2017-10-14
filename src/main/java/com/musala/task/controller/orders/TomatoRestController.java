@@ -1,4 +1,4 @@
-package com.musala.task.controller;
+package com.musala.task.controller.orders;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.musala.task.domain.TomatoOrder;
+import com.musala.task.model.TomatoOrder;
 import com.musala.task.responses.ErrorCode;
 import com.musala.task.responses.TomatoOrderResponse;
-import com.musala.task.services.TomatoOrdersService;
+import com.musala.task.services.orders.TomatoOrdersService;
 
 @RestController
 @RequestMapping(path="tomatoes")

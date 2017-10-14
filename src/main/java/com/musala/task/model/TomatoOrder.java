@@ -1,4 +1,4 @@
-package com.musala.task.domain;
+package com.musala.task.model;
 
 public class TomatoOrder {
 	

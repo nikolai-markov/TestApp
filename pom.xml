@@ -5,10 +5,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.websystique.springmvc</groupId>
-	<artifactId>OrdersApp</artifactId>
+	<artifactId>OrdersAppTest</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
-	<name>Spring4MVCHelloWorldRestServiceDemo Maven Webapp</name>
+	<name>OrdersAppTest Maven Webapp</name>
 
 	<properties>
 		<springframework.version>4.3.0.RELEASE</springframework.version>
@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -78,13 +78,13 @@
 					<version>2.4</version>
 					<configuration>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>OrdersApp</warName>
+						<warName>OrdersAppTest</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 
-		<finalName>OrdersApp</finalName>
+		<finalName>OrdersAppTest</finalName>
 	</build>
 </project>

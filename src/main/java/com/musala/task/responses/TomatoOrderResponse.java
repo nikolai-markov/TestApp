@@ -2,7 +2,7 @@ package com.musala.task.responses;
 
 import java.util.List;
 
-import com.musala.task.domain.TomatoOrder;
+import com.musala.task.model.TomatoOrder;
 
 public class TomatoOrderResponse {
 	

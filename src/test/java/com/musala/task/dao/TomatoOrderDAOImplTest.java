@@ -8,9 +8,9 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.musala.task.dao.TomatoOrderDAO;
-import com.musala.task.dao.TomatoOrderDAOImpl;
-import com.musala.task.domain.TomatoOrder;
+import com.musala.task.dao.orders.TomatoOrderDAO;
+import com.musala.task.dao.orders.TomatoOrderDAOImpl;
+import com.musala.task.model.TomatoOrder;
 
 public class TomatoOrderDAOImplTest {
 	
