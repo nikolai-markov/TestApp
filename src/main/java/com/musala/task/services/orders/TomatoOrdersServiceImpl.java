@@ -15,7 +15,7 @@ public class TomatoOrdersServiceImpl implements TomatoOrdersService {
 	private TomatoOrderDAO tomatoOrderProvider;
 	
 	@Override
-	public List<TomatoOrder> retrieveTomatoOrders(long size) {
+	public List<TomatoOrder> retrieveTomatoOrders(int size) {
 		
 		List<TomatoOrder> orders = tomatoOrderProvider.getTomatoOrders(size);
 		

@@ -5,18 +5,18 @@ public class TomatoOrder {
 	private String id;
 	private int tomatoes;
 	private String provider;
-	private Long date;
+	private Long timestamp;
 	
 	public TomatoOrder() {
 		
 	}
 	
-	public TomatoOrder(String id, int tomatoes, String provider, Long date) {
+	public TomatoOrder(String id, int tomatoes, String provider, Long timestamp) {
 		super();
 		this.id = id;
 		this.tomatoes = tomatoes;
 		this.provider = provider;
-		this.date = date;
+		this.timestamp = timestamp;
 	}
 	
 	public String getId() {
@@ -37,11 +37,11 @@ public class TomatoOrder {
 	public void setProvider(String provider) {
 		this.provider = provider;
 	}
-	public Long getDate() {
-		return date;
+	public Long getTimestamp() {
+		return timestamp;
 	}
-	public void setDate(Long date) {
-		this.date = date;
+	public void setTimestamp(Long timestamp) {
+		this.timestamp = timestamp;
 	}
 	
 }

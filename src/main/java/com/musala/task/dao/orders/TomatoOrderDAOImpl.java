@@ -19,9 +19,9 @@ public class TomatoOrderDAOImpl implements TomatoOrderDAO {
 	public String[] TOMATO_PROVIDERS = {"Heinz", "Hunt's", "Del Monte", "Le Ol' Granma"};
 	
 	@Override
-	public List<TomatoOrder> getTomatoOrders(long size) {
+	public List<TomatoOrder> getTomatoOrders(int size) {
 		
-		List<TomatoOrder> orders = new ArrayList<TomatoOrder>();
+		List<TomatoOrder> orders = new ArrayList<TomatoOrder>(size);
 		
 		for (int i = 0; i < size; i++) {
 			TomatoOrder order = generateOrder();
@@ -32,6 +32,13 @@ public class TomatoOrderDAOImpl implements TomatoOrderDAO {
 	}
 	
 	
+	/**
+	 * Generate one random order that has: <p>
+	 * tomatoes: Integer from 1 to 2000 <p>
+	 * provider: randomly generated string from "Heinz", "Hunt's", "Del Monte", "Le Ol' Granma" <p>
+	 * timestamp: randomly generated string from the begging of this year to today. <p>
+	 * @return
+	 */
 	private TomatoOrder generateOrder() {
 		TomatoOrder tomatoOrder = new TomatoOrder();
 		
@@ -44,7 +51,7 @@ public class TomatoOrderDAOImpl implements TomatoOrderDAO {
 		UUID uuid = UUID.randomUUID();
 		Long timestamp = getRandomTimestamp();
 		
-		tomatoOrder.setDate(timestamp);
+		tomatoOrder.setTimestamp(timestamp);
 		tomatoOrder.setId(uuid.toString());
 		tomatoOrder.setProvider(provider);
 		tomatoOrder.setTomatoes(orderSize);
@@ -61,8 +68,8 @@ public class TomatoOrderDAOImpl implements TomatoOrderDAO {
 		Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
 		
 		Long afterMillis = calendar.getTimeInMillis();
-		
-	    calendar.set(Calendar.MONTH, Calendar.MAY);  
+	
+	    calendar.set(Calendar.DAY_OF_YEAR, 1);
 	    Long beforeMillis = calendar.getTimeInMillis();
 		
 		long timestamp = ThreadLocalRandom.current().nextLong(beforeMillis, afterMillis);
